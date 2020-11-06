@@ -15,6 +15,7 @@ public class GlobalExceptionController {
         return new ObjectResponse<>(ex, HttpStatus.BAD_REQUEST);
     }
 
+    
     @ExceptionHandler(value = ApiException.class)
     @ResponseBody
     public ObjectResponse<ApiException> handleKonanException(ApiException ex) {

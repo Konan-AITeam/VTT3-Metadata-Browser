@@ -5,6 +5,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 public class SHAPasswordEncoder implements PasswordEncoder {
 
+    
     private ShaPasswordEncoder shaPasswordEncoder;
     private Object salt = null;
 

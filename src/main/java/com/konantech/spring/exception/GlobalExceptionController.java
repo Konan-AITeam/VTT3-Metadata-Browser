@@ -22,6 +22,7 @@ public class GlobalExceptionController {
         return new ObjectResponse<>(ex, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
+    
     @ExceptionHandler(value = NotFoundException.class)
     @ResponseBody
     public ObjectResponse<NotFoundException> handleKonanException(NotFoundException ex) {

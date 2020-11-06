@@ -61,4 +61,5 @@ public class AuthenticationTokenFilter extends UsernamePasswordAuthenticationFil
         }
         chain.doFilter(httpRequest, httpResponse);
     }
+    
 }

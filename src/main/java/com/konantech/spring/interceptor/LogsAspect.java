@@ -1,5 +1,4 @@
 package com.konantech.spring.interceptor;
-
 import com.konantech.spring.util.RequestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.JoinPoint;

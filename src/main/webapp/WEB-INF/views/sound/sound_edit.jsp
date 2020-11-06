@@ -35,14 +35,33 @@
             <div class="x_panel">
                 <div class="x_title">
                     <h2>영상<small>Video</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
+                    <div class="image-tag">
+                        <sec:authorize access="hasAnyRole('ROLE_ADMIN,ROLE_EDITER,ROLE_USER')" var="u">
+                            <div class="img-shot-select m-right5" style="float: right">
+                                <select id="userSelect" class="form-control">
+                                    <option value>
+                                        작업자
+                                    </option>
+                                    <c:if test="${ userList.size() != 0 }">
+                                        <c:forEach var="list" items="${userList}" varStatus="i">
+                                            <option value="${list.userid}">
+                                                    ${list.userid}
+                                            </option>
+                                        </c:forEach>
+                                    </c:if>
+                                </select>
+                            </div>
+                        </sec:authorize>
+                        <div class="clearfix"></div>
+                    </div>
+                    <%--<ul class="nav navbar-right panel_toolbox">
                         <li>
-                            <%--<a class="table-btn" onclick="help_hotkey()">
+                            <a class="table-btn" onclick="help_hotkey()">
                                 <i class="fa fa-keyboard-o"></i>
                                 단축키
-                            </a>--%>
+                            </a>
                         </li>
-                    </ul>
+                    </ul>--%>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content superbox" id = "content">
@@ -111,13 +130,22 @@
     var _startsec = "0:00:00";
     var _endsec = "0:00:00";
     var isReplay = false;
+    var otheruserid_val = "";
+
+    function setUserSelected_sound(){
+        $("#userSelect").off('change');
+        $("#userSelect").find("option[value='"+otheruserid_val+"']").attr("selected","selected");
+        $("#userSelect").on("change",function(){
+            getSeoundSectionList(<c:out value="${idx}"/>);
+        });
+    }
 
     /* 오디오정보 조회 */
     function getSeoundSectionList(idx){
         $.ajax({
             url: '<c:url value="/sound/soundList"/>',
             type: 'POST',
-            data: {'idx': idx},
+            data: {'idx': idx, 'otheruserid' : $("#userSelect").val()},
             async: false,
             dataType: 'html',
             // contentType: "application/x-www-form-urlencoded; charset=UTF-8",
@@ -288,6 +316,7 @@
             appendSection();
             return false;
         });
+        setUserSelected_sound();
     });
 </script>
 <c:import url="../includes/footer.jsp"/>

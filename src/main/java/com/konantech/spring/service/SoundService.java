@@ -1,5 +1,6 @@
 package com.konantech.spring.service;
 
+import com.konantech.spring.domain.content.ContentQuery;
 import com.konantech.spring.domain.sound.Sound;
 import com.konantech.spring.mapper.SoundMapper;
 import com.konantech.spring.util.JSONUtils;
@@ -24,7 +25,12 @@ public class SoundService {
 
     public List<Map> getSoundList(HttpServletRequest request, Principal principal) {
         Map param = RequestUtils.getParameterMap(request);
-        param.put("userid", principal.getName());
+        String otheruserid = RequestUtils.getParameter(request, "otheruserid");
+        if(otheruserid == null || "".equals(otheruserid)){
+            param.put("userid", principal.getName());
+        }else{
+            param.put("userid", otheruserid);
+        }
         return soundMapper.getSoundList(param);
     }
 
@@ -68,5 +74,7 @@ public class SoundService {
         return resultJson;
     }
 
-
+    public List<Map> getWorkerList(ContentQuery contentQuery) throws Exception {
+        return soundMapper.getWorkerList(contentQuery);
+    }
 }

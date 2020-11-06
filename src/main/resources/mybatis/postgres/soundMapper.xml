@@ -79,4 +79,10 @@
       s.videoid = #{idx}
       and s.userid = #{userid}
     </select>
+
+    <select id="getWorkerList" parameterType="ContentQuery" resultType="java.util.Map">
+
+        select distinct userid from vttm_sound_tb where videoid = #{idx} and userid != 'konan'
+
+    </select>
 </mapper>

@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApiException extends Exception {
     private int code;
 
+    
     @JsonProperty("status")
     private int status = 400;
 
@@ -36,6 +37,7 @@ public class ApiException extends Exception {
 
     public ApiException(int code) {
         this(code, null);
+        
     }
 
 

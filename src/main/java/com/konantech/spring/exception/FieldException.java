@@ -15,6 +15,7 @@ public class FieldException extends ApiException {
 
     public FieldException(BindingResult result) {
         super(601);
+        
         errorList = new ArrayList<>();
         List<ObjectError> objectErrorList = result.getAllErrors();
         if (objectErrorList != null && !objectErrorList.isEmpty()) {

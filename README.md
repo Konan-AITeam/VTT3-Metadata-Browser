@@ -16,7 +16,6 @@ JAVA 프로젝트로, Gradle 프로젝트로 오픈하면 됩니다.
 서버목록
 >- [client] VTT 클라이언트 서버 
 >- [db] Postgresql 서버
->- [tc] Transcoder 서버
 >- [ca] Catalog 서버
 
 

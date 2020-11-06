@@ -491,4 +491,24 @@
 
     </select>
 
+    <select id="getWorkerList" parameterType="ContentQuery" resultType="java.util.Map">
+
+        select distinct userid
+        from (
+                 select vsqt.userid
+                 from vttm_section_info_tb as vsit
+                          inner join vttm_section_qa_tb vsqt on vsit.sectionid = vsqt.sectionid
+
+                 where vsit.videoid = #{idx}
+                 union all
+
+                 select vsqt.userid
+                 from vttm_shot_tb vst
+                          inner join vttm_shot_qa_tb vsqt on vst.shotid = vsqt.shotid
+                 where vst.videoid = #{idx}
+
+             ) a
+        order by userid
+
+    </select>
 </mapper>

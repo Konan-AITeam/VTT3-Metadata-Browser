@@ -87,15 +87,34 @@
             <div class="row">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>영상<small>Video</small></h2>
-                        <ul class="nav navbar-right panel_toolbox">
+                        <h2>영상fwef<small>Video</small></h2>
+                        <div class="image-tag">
+                            <sec:authorize access="hasAnyRole('ROLE_ADMIN,ROLE_EDITER,ROLE_USER')" var="u">
+                                <div class="img-shot-select m-right5" style="float: right">
+                                    <select id="userSelect" class="form-control">
+                                        <option value>
+                                            작업자
+                                        </option>
+                                        <c:if test="${ userList.size() != 0 }">
+                                            <c:forEach var="list" items="${userList}" varStatus="i">
+                                                <option value="${list.userid}">
+                                                        ${list.userid}
+                                                </option>
+                                            </c:forEach>
+                                        </c:if>
+                                    </select>
+                                </div>
+                            </sec:authorize>
+                            <div class="clearfix"></div>
+                        </div>
+                        <%--<ul class="nav navbar-right panel_toolbox">
                             <li >
-                                <%--<a class="table-btn" onclick="help_hotkey()">
+                                <a class="table-btn" onclick="help_hotkey()">
                                     <i class="fas fa-keyboard"></i> 단축키
-                                </a>--%>
+                                </a>
                             </li>
-                        </ul>
-                        <div class="clearfix"></div>
+                        </ul>--%>
+
                     </div>
                     <div class="x_content" id="scrollImgDiv">
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 videobox">
@@ -166,6 +185,7 @@
     var _rate = ${rate};
     var _startsec = 0;
     var _endsec = 0;
+    var otheruserid_val = "";
 
     String.prototype.capitalize = function() {
         return this.charAt(0).toUpperCase() + this.slice(1);
@@ -173,6 +193,14 @@
 
     String.prototype.onlyEngNum = function () {
         return this.replace(/[^a-zA-Z0-9\s.,'"!~\-?]/gi, '');
+    }
+
+    function setUserSelected_qa(){
+        $("#userSelect").off('change');
+        $("#userSelect").find("option[value='"+otheruserid_val+"']").attr("selected","selected");
+        $("#userSelect").on("change",function(){
+            getQaSectionList(<c:out value="${idx}"/>);
+        });
     }
 
     function firstLetterUpperCase() {
@@ -248,7 +276,7 @@
         $.ajax({
             url: '<c:url value="/section/getQuestionList"/>',
             type: 'POST',
-            data: {"sectionid":sectionid},
+            data: {"sectionid":sectionid, 'otheruserid' : $("#userSelect").val()},
             async: false,
             dataType: 'html',
             // contentType: "application/x-www-form-urlencoded; charset=UTF-8",
@@ -271,7 +299,7 @@
         $.ajax({
             url: '<c:url value="/section/getShotQuestionList"/>',
             type: 'POST',
-            data: {"shotid":shotid},
+            data: {"shotid":shotid, 'otheruserid' : $("#userSelect").val()},
             async: false,
             dataType: 'html',
             // contentType: "application/x-www-form-urlencoded; charset=UTF-8",
@@ -894,6 +922,7 @@
         getQaSectionList(<c:out value="${idx}"/>); // 리스트 idx 넘겨받음.(ex) 624
         resizeVideo();
         proceedHotkey();
+        setUserSelected_qa();
         $("#relationList").height($(".section-list-Wrap").height()/2);
     });
 </script>

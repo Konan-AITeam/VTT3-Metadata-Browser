@@ -1,5 +1,6 @@
 package com.konantech.spring.mapper;
 
+import com.konantech.spring.domain.content.ContentQuery;
 import com.konantech.spring.domain.section.Qa;
 import com.konantech.spring.domain.section.Section;
 import org.apache.ibatis.annotations.Mapper;
@@ -66,5 +67,7 @@ public interface SectionMapper {
     List<Qa.QaResult.QnaInfo> getSectionInfoQa(Map param);
 
     List<Qa.QaResult.QnaInfo> getShotInfoQa(Map param);
+
+    List<Map> getWorkerList(ContentQuery contentQuery) throws Exception;
 
 }

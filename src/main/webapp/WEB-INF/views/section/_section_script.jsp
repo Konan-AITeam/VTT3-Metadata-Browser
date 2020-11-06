@@ -121,7 +121,7 @@
         $.ajax({
             url: '<c:url value="/section/getQaSectionList"/>',
             type: 'POST',
-            data: {'idx': idx, 'rate':_rate},
+            data: {'idx': idx, 'rate':_rate, 'otheruserid' : $("#userSelect").val()},
             dataType: 'html',
             // contentType: "application/x-www-form-urlencoded; charset=UTF-8",
             success: function (html) {

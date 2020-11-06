@@ -1,5 +1,6 @@
 package com.konantech.spring.service;
 
+import com.konantech.spring.domain.content.ContentQuery;
 import com.konantech.spring.domain.section.Qa;
 import com.konantech.spring.domain.section.Section;
 import com.konantech.spring.mapper.ContentMapper;
@@ -31,8 +32,13 @@ public class SectionService {
 
     public List<Map> getSectionList(HttpServletRequest request, Principal principal) {
         String idx = RequestUtils.getParameter(request, "idx");
+        String otheruserid = RequestUtils.getParameter(request, "otheruserid");
         HashMap<String, String> param = new HashMap<>();
-        param.put("userid", principal.getName());
+        if(otheruserid == null || "".equals(otheruserid)){
+            param.put("userid", principal.getName());
+        }else{
+            param.put("userid", otheruserid);
+        }
         param.put("idx", idx);
 
         List<Map> list = sectionMapper.getSectionList(param);
@@ -107,8 +113,13 @@ public class SectionService {
 
     public List<Map> getQuestionList(HttpServletRequest request, Principal principal) {
         String sectionid = RequestUtils.getParameter(request, "sectionid");
+        String otheruserid = RequestUtils.getParameter(request, "otheruserid");
         HashMap<String, String> param = new HashMap<>();
-        param.put("userid", principal.getName());
+        if(otheruserid == null || "".equals(otheruserid)){
+            param.put("userid", principal.getName());
+        }else{
+            param.put("userid", otheruserid);
+        }
         param.put("sectionid", sectionid);
         return sectionMapper.getQuestionList(param);
     }
@@ -148,8 +159,13 @@ public class SectionService {
 
     public List<Map> getShotQuestionList(HttpServletRequest request, Principal principal) {
         String shotid = RequestUtils.getParameter(request, "shotid");
+        String otheruserid = RequestUtils.getParameter(request, "otheruserid");
         HashMap<String, String> param = new HashMap<>();
-        param.put("userid", principal.getName());
+        if(otheruserid == null || "".equals(otheruserid)){
+            param.put("userid", principal.getName());
+        }else{
+            param.put("userid", otheruserid);
+        }
         param.put("shotid", shotid);
         return sectionMapper.getShotQuestionList(param);
     }
@@ -315,4 +331,7 @@ public class SectionService {
         return resultJson;
     }
 
+    public List<Map> getWorkerList(ContentQuery contentQuery) throws Exception {
+        return sectionMapper.getWorkerList(contentQuery);
+    }
 }

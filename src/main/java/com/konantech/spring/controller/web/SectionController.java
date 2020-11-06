@@ -66,6 +66,11 @@ public class SectionController {
         contentQuery.setIdx(idx);
         ContentField contentField = contentService.getContentItem(contentQuery);
 
+        if(request.isUserInRole("ROLE_ADMIN")){
+            List userList = sectionService.getWorkerList(contentQuery);
+            modelMap.addAttribute("userList", userList);
+        }
+
         String mediaInfo = contentField.getMediainfo();
         Map mediaMap = JSONUtils.jsonStringToMap(mediaInfo);
         List list = (List) mediaMap.get("streams");

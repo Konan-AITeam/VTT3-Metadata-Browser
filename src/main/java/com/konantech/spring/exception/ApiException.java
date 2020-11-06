@@ -37,6 +37,7 @@ public class ApiException extends Exception {
 
     public ApiException(int code) {
         this(code, null);
+        
     }
 
 

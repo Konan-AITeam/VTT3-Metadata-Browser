@@ -19,7 +19,7 @@
                         <a href="<c:url value="/content"/>"> 콘텐츠 리스트</a>
                     </li>
                     <li class="breadcrumb-item strong active">
-                        자막 편집
+                        자막
                     </li>
                 </ol>
             </div>
@@ -35,14 +35,33 @@
             <div class="x_panel">
                 <div class="x_title">
                     <h2>영상<small>Video</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
+                    <div class="image-tag">
+                        <sec:authorize access="hasAnyRole('ROLE_ADMIN,ROLE_EDITER,ROLE_USER')" var="u">
+                            <div class="img-shot-select m-right5" style="float: right">
+                                <select id="userSelect" class="form-control">
+                                    <option value>
+                                        작업자
+                                    </option>
+                                    <c:if test="${ userList.size() != 0 }">
+                                        <c:forEach var="list" items="${userList}" varStatus="i">
+                                            <option value="${list.userid}">
+                                                    ${list.userid}
+                                            </option>
+                                        </c:forEach>
+                                    </c:if>
+                                </select>
+                            </div>
+                        </sec:authorize>
+                        <div class="clearfix"></div>
+                    </div>
+                    <%--<ul class="nav navbar-right panel_toolbox">
                         <li>
-                            <%--<a class="table-btn" onclick="help_hotkey()">
+                            <a class="table-btn" onclick="help_hotkey()">
                                 <i class="fa fa-keyboard-o"></i>
                                 단축키
-                            </a>--%>
+                            </a>
                         </li>
-                    </ul>
+                    </ul>--%>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content superbox" id = "content">
@@ -58,7 +77,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12" id="imgShot">
             <div class="img-shot-title x_panel">
                 <div class="x_title">
-                    <h2>구간 편집<small> Section edit</small></h2>
+                    <h2>구간<small> Section edit</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <%--<li>
                             <button class="btn btn-success" onclick="appendSection()">신규구간 생성</button>
@@ -113,6 +132,7 @@
     var _startsec = "0:00:00";
     var _endsec = "0:00:00";
     var isReplay = false;
+    var otheruserid_val = "";
 
     String.prototype.capitalize = function() {
         return this.charAt(0).toUpperCase() + this.slice(1);
@@ -120,6 +140,14 @@
 
     String.prototype.onlyEngNum = function () {
         return this.replace(/[^a-zA-Z0-9\s.,?"'()]/gi, '');
+    }
+
+    function setUserSelected_subtitle(){
+        $("#userSelect").off('change');
+        $("#userSelect").find("option[value='"+otheruserid_val+"']").attr("selected","selected");
+        $("#userSelect").on("change",function(){
+            getSubtitleSectionList(<c:out value="${idx}"/>);
+        });
     }
 
     function firstLetterUpperCase(obj) {
@@ -150,7 +178,7 @@
         $.ajax({
             url: '<c:url value="/subtitle/subtitleList"/>',
             type: 'POST',
-            data: {'idx': idx},
+            data: {'idx': idx, 'otheruserid' : $("#userSelect").val()},
             async: false,
             dataType: 'html',
             // contentType: "application/x-www-form-urlencoded; charset=UTF-8",
@@ -514,6 +542,8 @@
             appendSection();
             return false;
         });
+
+        setUserSelected_subtitle();
     });
 </script>
 <c:import url="../includes/footer.jsp"/>

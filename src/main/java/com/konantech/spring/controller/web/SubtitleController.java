@@ -52,6 +52,11 @@ public class SubtitleController {
         contentQuery.setIdx(idx);
         ContentField contentField =contentService.getContentItem(contentQuery);
 
+        if(request.isUserInRole("ROLE_ADMIN")){
+            List userList = subtitleService.getWorkerList(contentQuery);
+            modelMap.addAttribute("userList", userList);
+        }
+
         modelMap.addAttribute("idx", idx);
         modelMap.addAttribute("videoServerUrl", videoServerUrl);
         modelMap.addAttribute("contentField", contentField);

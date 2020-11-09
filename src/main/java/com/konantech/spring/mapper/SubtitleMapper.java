@@ -1,5 +1,6 @@
 package com.konantech.spring.mapper;
 
+import com.konantech.spring.domain.content.ContentQuery;
 import com.konantech.spring.domain.subtitle.Subtitle;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
@@ -22,4 +23,6 @@ public interface SubtitleMapper {
     Subtitle getSubtitleJson(Map param);
 
     List<Subtitle.SubtitleResult> getSubtitleResultsJson(Map param);
+
+    List<Map> getWorkerList(ContentQuery contentQuery) throws Exception;
 }

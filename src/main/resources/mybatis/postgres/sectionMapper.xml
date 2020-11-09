@@ -508,6 +508,7 @@
                  where vst.videoid = #{idx}
 
              ) a
+        where userid != 'konan'
         order by userid
 
     </select>

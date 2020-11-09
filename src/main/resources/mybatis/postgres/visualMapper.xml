@@ -328,6 +328,7 @@
         inner join vttm_user_tb u
         on meta.userid = u.username
         where meta.idx = #{videoid}
+          and u.username != 'konan'
     </select>
 
 

@@ -32,7 +32,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12" id="imgShot">
             <div class="img-shot-title x_panel">
                 <div class="x_title">
-                    <h2>구간 편집<small> Section edit</small></h2>
+                    <h2>구간<small> Section edit</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
 <%--                        <li>
                             <button class="btn btn-success" onclick="appendSection()">신규구간 생성</button>

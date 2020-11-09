@@ -22,7 +22,7 @@
                         <a href="<c:url value="/content"/>"> 콘텐츠 리스트</a>
                     </li>
                     <li class="breadcrumb-item strong active">
-                        묘사 & Q&A 편집(${contentField.orifilename})
+                        묘사 & Q&A (${contentField.orifilename})
                     </li>
                 </ol>
             </div>
@@ -87,7 +87,7 @@
             <div class="row">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>영상fwef<small>Video</small></h2>
+                        <h2>영상<small>Video</small></h2>
                         <div class="image-tag">
                             <sec:authorize access="hasAnyRole('ROLE_ADMIN,ROLE_EDITER,ROLE_USER')" var="u">
                                 <div class="img-shot-select m-right5" style="float: right">
@@ -128,7 +128,7 @@
                 <div class="img-shot-title x_panel">
                     <div class="x_title">
                         <div id="qaSceneTitle" class="qaTitle" style="display:none;">
-                        <h2>Scene 묘사 QA 등록<small> Scene QA</small></h2>
+                        <h2>Scene 묘사 QA <small> Scene QA</small></h2>
                         <ul class="nav navbar-right panel_toolbox">
 <%--                            <li>
                                 <a id="btnGuideScene" class="table-btn" onclick="custModalPopup('section/guide/scene','guideModal');">
@@ -143,7 +143,7 @@
                         </ul>
                         </div>
                         <div id="qaShotTitle" class="qaTitle" style="display:none;">
-                            <h2 >Shot 묘사 QA 등록<small> Shot QA</small></h2>
+                            <h2 >Shot 묘사 QA <small> Shot QA</small></h2>
                             <ul class="nav navbar-right panel_toolbox">
 <%--                                <li>
                                     <a id="btnGuideShot" class="table-btn" onclick="custModalPopup('section/guide/shot','guideModal');">

@@ -137,7 +137,7 @@
                         <a href="<c:url value="/content"/>"> 콘텐츠 리스트</a>
                     </li>
                     <li class="breadcrumb-item strong active">
-                        시각정보 편집(${contentField.orifilename})
+                        시각정보 (${contentField.orifilename})
                     </li>
                 </ol>
             </div>

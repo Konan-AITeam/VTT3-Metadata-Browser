@@ -27,9 +27,10 @@ public interface ErrorCode {
     int ERR_7007_ACCESS_ERROR                   = 7007; // 유효하지 않은 코드
     int ERR_7010_COMPSERVER_ERROR               = 7010; // 컴포넌트 오류
 
-
     // Agent
     int ERR_8005_FILE_NOT_FOUND                 = 8005; // 존재하지 않는 파일
     int ERR_8999_UNKNOWN                        = 8999; // 기타 에러
+    int ERR_TEST                                = 0000; // 에러 테스트
+
 
 }

@@ -11,7 +11,7 @@
         FROM
         VTTM_VIDEO_TB
         <where>
-
+            display = true
         </where>
     </select>
 

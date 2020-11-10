@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 
 @JsonIgnoreProperties({"headers", "statusCode", "statusCodeValue"})
 public class ObjectResponse<T> extends ResponseEntity<T> {
+    
     public ObjectResponse() {
         super(HttpStatus.OK);
     }
@@ -28,4 +29,5 @@ public class ObjectResponse<T> extends ResponseEntity<T> {
     public T getBody() {
         return super.getBody();
     }
+    
 }

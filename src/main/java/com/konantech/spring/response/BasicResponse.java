@@ -7,6 +7,7 @@ import java.io.Serializable;
 
 @Data
 public class BasicResponse implements Serializable {
+
     String result;
     int status;
     Object data;
@@ -21,5 +22,6 @@ public class BasicResponse implements Serializable {
         this.setResult("Error");
         this.setData(e.getMessage());
     }
+
 }
 

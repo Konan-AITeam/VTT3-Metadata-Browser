@@ -2,15 +2,16 @@ package com.konantech.spring.response;
 
 import lombok.Data;
 
+
 @Data
 public class MapResponse {
     String result;
     int status;
     Object message;
-    long timestamps;
+    long timestamp;
 
     public MapResponse() {
         this.status = 200;
-        timestamps = System.currentTimeMillis();
+        timestamp = System.currentTimeMillis();
     }
 }

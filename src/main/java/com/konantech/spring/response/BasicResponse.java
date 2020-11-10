@@ -18,7 +18,7 @@ public class BasicResponse implements Serializable {
 
     public BasicResponse(Exception e) {
         this.status = HttpStatus.BAD_REQUEST.value();
-        this.setResult("error");
+        this.setResult("Error");
         this.setData(e.getMessage());
     }
 }

@@ -7,10 +7,10 @@ public class MapResponse {
     String result;
     int status;
     Object message;
-    long timestamp;
+    long timestamps;
 
     public MapResponse() {
         this.status = 200;
-        timestamp = System.currentTimeMillis();
+        timestamps = System.currentTimeMillis();
     }
 }

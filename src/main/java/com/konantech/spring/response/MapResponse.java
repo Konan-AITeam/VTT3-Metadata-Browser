@@ -5,6 +5,7 @@ import lombok.Data;
 
 @Data
 public class MapResponse {
+
     String result;
     int status;
     Object message;
@@ -14,4 +15,5 @@ public class MapResponse {
         this.status = 200;
         timestamp = System.currentTimeMillis();
     }
+
 }

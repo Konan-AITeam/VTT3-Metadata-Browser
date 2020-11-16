@@ -5,8 +5,10 @@ import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+
 @JsonIgnoreProperties({"headers", "statusCode", "statusCodeValue"})
 public class ObjectResponse<T> extends ResponseEntity<T> {
+    
     public ObjectResponse() {
         super(HttpStatus.OK);
     }
@@ -27,4 +29,5 @@ public class ObjectResponse<T> extends ResponseEntity<T> {
     public T getBody() {
         return super.getBody();
     }
+    
 }

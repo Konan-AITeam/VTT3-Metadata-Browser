@@ -7,6 +7,7 @@ import java.io.Serializable;
 
 @Data
 public class BasicResponse implements Serializable {
+
     String result;
     int status;
     Object data;
@@ -18,8 +19,9 @@ public class BasicResponse implements Serializable {
 
     public BasicResponse(Exception e) {
         this.status = HttpStatus.BAD_REQUEST.value();
-        this.setResult("error");
+        this.setResult("Error");
         this.setData(e.getMessage());
     }
+
 }
 

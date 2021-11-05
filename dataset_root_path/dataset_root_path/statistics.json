@@ -1,0 +1,262 @@
+{
+    "time": "6:15:31",
+    "num_videos": 10,
+    "num_images": 3027,
+    "avg_images_per_video": 302.7,
+    "num_instances": 4797,
+    "avg_instances_per_image": 1.6,
+    "instances": [
+        {
+            "instance": "person",
+            "num_instance": 3237
+        },
+        {
+            "instance": "laptop",
+            "num_instance": 23
+        },
+        {
+            "instance": "tie",
+            "num_instance": 335
+        },
+        {
+            "instance": "chair",
+            "num_instance": 111
+        },
+        {
+            "instance": "tv",
+            "num_instance": 70
+        },
+        {
+            "instance": "airplane",
+            "num_instance": 24
+        },
+        {
+            "instance": "bowl",
+            "num_instance": 43
+        },
+        {
+            "instance": "bird",
+            "num_instance": 24
+        },
+        {
+            "instance": "cup",
+            "num_instance": 19
+        },
+        {
+            "instance": "clock",
+            "num_instance": 14
+        },
+        {
+            "instance": "donut",
+            "num_instance": 1
+        },
+        {
+            "instance": "backpack",
+            "num_instance": 5
+        },
+        {
+            "instance": "kite",
+            "num_instance": 2
+        },
+        {
+            "instance": "toilet",
+            "num_instance": 6
+        },
+        {
+            "instance": "keyboard",
+            "num_instance": 15
+        },
+        {
+            "instance": "mouse",
+            "num_instance": 9
+        },
+        {
+            "instance": "bottle",
+            "num_instance": 108
+        },
+        {
+            "instance": "bed",
+            "num_instance": 23
+        },
+        {
+            "instance": "baseball glove",
+            "num_instance": 6
+        },
+        {
+            "instance": "dog",
+            "num_instance": 16
+        },
+        {
+            "instance": "cell phone",
+            "num_instance": 12
+        },
+        {
+            "instance": "sheep",
+            "num_instance": 1
+        },
+        {
+            "instance": "umbrella",
+            "num_instance": 30
+        },
+        {
+            "instance": "sports ball",
+            "num_instance": 1
+        },
+        {
+            "instance": "truck",
+            "num_instance": 10
+        },
+        {
+            "instance": "refrigerator",
+            "num_instance": 5
+        },
+        {
+            "instance": "book",
+            "num_instance": 33
+        },
+        {
+            "instance": "bench",
+            "num_instance": 20
+        },
+        {
+            "instance": "dining table",
+            "num_instance": 24
+        },
+        {
+            "instance": "handbag",
+            "num_instance": 38
+        },
+        {
+            "instance": "surfboard",
+            "num_instance": 8
+        },
+        {
+            "instance": "oven",
+            "num_instance": 4
+        },
+        {
+            "instance": "boat",
+            "num_instance": 5
+        },
+        {
+            "instance": "potted plant",
+            "num_instance": 23
+        },
+        {
+            "instance": "elephant",
+            "num_instance": 2
+        },
+        {
+            "instance": "motorcycle",
+            "num_instance": 4
+        },
+        {
+            "instance": "frisbee",
+            "num_instance": 9
+        },
+        {
+            "instance": "car",
+            "num_instance": 225
+        },
+        {
+            "instance": "snowboard",
+            "num_instance": 1
+        },
+        {
+            "instance": "cake",
+            "num_instance": 1
+        },
+        {
+            "instance": "train",
+            "num_instance": 23
+        },
+        {
+            "instance": "horse",
+            "num_instance": 155
+        },
+        {
+            "instance": "baseball bat",
+            "num_instance": 3
+        },
+        {
+            "instance": "bicycle",
+            "num_instance": 5
+        },
+        {
+            "instance": "suitcase",
+            "num_instance": 4
+        },
+        {
+            "instance": "fire hydrant",
+            "num_instance": 4
+        },
+        {
+            "instance": "tennis racket",
+            "num_instance": 4
+        },
+        {
+            "instance": "remote",
+            "num_instance": 1
+        },
+        {
+            "instance": "couch",
+            "num_instance": 8
+        },
+        {
+            "instance": "sink",
+            "num_instance": 10
+        },
+        {
+            "instance": "scissors",
+            "num_instance": 2
+        },
+        {
+            "instance": "microwave",
+            "num_instance": 3
+        },
+        {
+            "instance": "cat",
+            "num_instance": 11
+        },
+        {
+            "instance": "vase",
+            "num_instance": 5
+        },
+        {
+            "instance": "cow",
+            "num_instance": 2
+        },
+        {
+            "instance": "toothbrush",
+            "num_instance": 1
+        },
+        {
+            "instance": "fork",
+            "num_instance": 1
+        },
+        {
+            "instance": "bus",
+            "num_instance": 2
+        },
+        {
+            "instance": "hair drier",
+            "num_instance": 1
+        },
+        {
+            "instance": "stop sign",
+            "num_instance": 2
+        },
+        {
+            "instance": "parking meter",
+            "num_instance": 1
+        },
+        {
+            "instance": "zebra",
+            "num_instance": 1
+        },
+        {
+            "instance": "traffic light",
+            "num_instance": 1
+        }
+    ]
+}

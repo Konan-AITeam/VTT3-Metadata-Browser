@@ -1,0 +1,18 @@
+{
+  "image_id": "SHOT_0000000003",
+  "frame_id": "IMAGE_0000000004",
+  "place": "none",
+  "persons": [],
+  "objects": [
+    {
+      "object_id": "chair",
+      "score": 0.5431084632873535,
+      "object_rect": {
+        "min_x": 24,
+        "min_y": 227,
+        "max_x": 181,
+        "max_y": 356
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "image_id": "SHOT_0000000002",
+  "frame_id": "IMAGE_0000000003",
+  "place": "none",
+  "persons": [],
+  "objects": [
+    {
+      "object_id": "person",
+      "score": 0.832400918006897,
+      "object_rect": {
+        "min_x": 287,
+        "min_y": 85,
+        "max_x": 474,
+        "max_y": 354
+      }
+    }
+  ]
+}

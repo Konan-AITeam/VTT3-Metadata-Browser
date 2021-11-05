@@ -1,0 +1,58 @@
+{
+  "image_id": "SHOT_0000000004",
+  "frame_id": "IMAGE_0000000005",
+  "place": "none",
+  "persons": [],
+  "objects": [
+    {
+      "object_id": "person",
+      "score": 0.9066141843795776,
+      "object_rect": {
+        "min_x": 387,
+        "min_y": 22,
+        "max_x": 626,
+        "max_y": 356
+      }
+    },
+    {
+      "object_id": "bowl",
+      "score": 0.8126672506332397,
+      "object_rect": {
+        "min_x": 114,
+        "min_y": 268,
+        "max_x": 191,
+        "max_y": 292
+      }
+    },
+    {
+      "object_id": "bottle",
+      "score": 0.7855680584907532,
+      "object_rect": {
+        "min_x": 336,
+        "min_y": 167,
+        "max_x": 385,
+        "max_y": 278
+      }
+    },
+    {
+      "object_id": "cup",
+      "score": 0.7445568442344666,
+      "object_rect": {
+        "min_x": 310,
+        "min_y": 250,
+        "max_x": 341,
+        "max_y": 281
+      }
+    },
+    {
+      "object_id": "person",
+      "score": 0.6413422226905823,
+      "object_rect": {
+        "min_x": 3,
+        "min_y": 19,
+        "max_x": 298,
+        "max_y": 288
+      }
+    }
+  ]
+}

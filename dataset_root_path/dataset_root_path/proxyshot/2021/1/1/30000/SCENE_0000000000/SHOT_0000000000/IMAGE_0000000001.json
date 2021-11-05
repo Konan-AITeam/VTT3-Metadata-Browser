@@ -1,0 +1,28 @@
+{
+  "image_id": "SHOT_0000000000",
+  "frame_id": "IMAGE_0000000001",
+  "place": "none",
+  "persons": [],
+  "objects": [
+    {
+      "object_id": "person",
+      "score": 0.8495534658432007,
+      "object_rect": {
+        "min_x": 140,
+        "min_y": 69,
+        "max_x": 361,
+        "max_y": 356
+      }
+    },
+    {
+      "object_id": "horse",
+      "score": 0.6052504777908325,
+      "object_rect": {
+        "min_x": 400,
+        "min_y": 83,
+        "max_x": 488,
+        "max_y": 173
+      }
+    }
+  ]
+}

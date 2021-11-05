@@ -10,11 +10,11 @@
 - 형식 
     1) 동영상 ID : {dataset_root_path}/video/2021/1/1/* , {dataset_root_path}/proxyshot/2021/1/1/*
     2) 동영상 파일
-        - {dataset_root_path}/video/2021/1/1/'*'/.mp4 (다양한 비디오 파일 형식)
+        - {dataset_root_path}/video/2021/1/1/*/.mp4 (다양한 비디오 파일 형식)
     3) 프레임 이미지 파일
-        - {dataset_root_path}/proxyshot/2021/1/1/'*'/SCENE_0000000000/SHOT_'*'/*.jpg
+        - {dataset_root_path}/proxyshot/2021/1/1/*/SCENE_0000000000/SHOT_*/*.jpg
     4) JSON 파일
-        - {dataset_root_path}/proxyshot/2021/1/1/'*'/SCENE_0000000000/SHOT_'*'/*.json 
+        - {dataset_root_path}/proxyshot/2021/1/1/*/SCENE_0000000000/SHOT_*/*.json 
     5) 통계 파일
         - 전체 동영상 통계 파일 : {dataset_root_path}/statistics.json 
         - 개별 동영상 통계 파일 : {dataset_root_path}/proxyshot/2021/1/1/*/statistics.json 

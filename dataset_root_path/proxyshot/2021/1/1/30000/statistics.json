@@ -1,0 +1,104 @@
+{
+    "time": "0:56:16",
+    "num_images": 503,
+    "num_instances": 710,
+    "avg_instances_per_image": 1.4,
+    "instances": [
+        {
+            "instance": "horse",
+            "num_instance": 146
+        },
+        {
+            "instance": "person",
+            "num_instance": 469
+        },
+        {
+            "instance": "frisbee",
+            "num_instance": 3
+        },
+        {
+            "instance": "bicycle",
+            "num_instance": 3
+        },
+        {
+            "instance": "umbrella",
+            "num_instance": 15
+        },
+        {
+            "instance": "cat",
+            "num_instance": 7
+        },
+        {
+            "instance": "tie",
+            "num_instance": 19
+        },
+        {
+            "instance": "tv",
+            "num_instance": 3
+        },
+        {
+            "instance": "car",
+            "num_instance": 1
+        },
+        {
+            "instance": "chair",
+            "num_instance": 5
+        },
+        {
+            "instance": "bed",
+            "num_instance": 2
+        },
+        {
+            "instance": "bowl",
+            "num_instance": 5
+        },
+        {
+            "instance": "laptop",
+            "num_instance": 1
+        },
+        {
+            "instance": "dining table",
+            "num_instance": 3
+        },
+        {
+            "instance": "surfboard",
+            "num_instance": 3
+        },
+        {
+            "instance": "baseball glove",
+            "num_instance": 3
+        },
+        {
+            "instance": "bottle",
+            "num_instance": 11
+        },
+        {
+            "instance": "cup",
+            "num_instance": 2
+        },
+        {
+            "instance": "vase",
+            "num_instance": 1
+        },
+        {
+            "instance": "cow",
+            "num_instance": 2
+        },
+        {
+            "instance": "motorcycle",
+            "num_instance": 1
+        },
+        {
+            "instance": "baseball bat",
+            "num_instance": 1
+        },
+        {
+            "instance": "bird",
+            "num_instance": 2
+        },
+        {
+            "instance": "clock",
+            "num_instance": 2
+        }
+    ]
+}

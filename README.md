@@ -44,7 +44,7 @@ npm run electron:build
 ```
 
 #### Lints and fixes files
-```
+``` bash
 npm run lint
 ```
 

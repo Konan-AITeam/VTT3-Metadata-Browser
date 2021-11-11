@@ -28,7 +28,6 @@
 
 3. 바탕화면에서 “vtt-metadatabrower-2021” 실행하여 메타데이터 브라우저에서 동영상의 메타데이터 확인 및 검증할 수 있다. 
 
-
 ### Project setup
 ```
 npm install
@@ -51,3 +50,4 @@ npm run lint
 
 #### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+---

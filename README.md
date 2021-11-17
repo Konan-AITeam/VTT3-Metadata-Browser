@@ -23,7 +23,6 @@
   - MAC : dmg파일 실행하고 application으로 이동하여 응용프로그램에 설치된다.
   - Window : setup.zip을 풀고 exe파일 실행하면 
     C:\Users\{로그인계정}\AppData\Local\Programs\vtt-metadatabrowser-2021에 설치되고 
-    C:\Users\{로그인계정}\AppData\Local\Programs\vtt-metadatabrowser-2021에 설치되고 
     바탕화면에 바로가기가 생성된다. 
 
 3. 바탕화면에서 “vtt-metadatabrower-2021” 실행하여 메타데이터 브라우저에서 동영상의 메타데이터 확인 및 검증할 수 있다. 

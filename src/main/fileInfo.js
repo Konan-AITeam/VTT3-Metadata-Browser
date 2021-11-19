@@ -11,6 +11,7 @@ function FileInfo () {
   this.m_isSubDirFileRead = true // 하위 디렉토리 안까지 모든 파일 검색
   this.filter = 'None'
 }
+
 FileInfo.prototype.PushFileData = function (_key, _path, _resultArr) {
   const self = this
 
@@ -66,6 +67,7 @@ FileInfo.prototype.GetVideoStatistics = function (_path) {
   const result = this.Read_JSON(_path)
   return result
 }
+
 FileInfo.prototype.GetShotStatistics = function (_path) {
   // shot image path -> statistics path
   const fd = new FileData()

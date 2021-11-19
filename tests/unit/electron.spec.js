@@ -1,6 +1,7 @@
 import testWithSpectron from 'vue-cli-plugin-electron-builder/lib/testWithSpectron'
 import chai from 'chai'
 import chaiAsPromised from 'chai-as-promised'
+
 // eslint-disable-next-line no-undef
 const spectron = __non_webpack_require__('spectron')
 

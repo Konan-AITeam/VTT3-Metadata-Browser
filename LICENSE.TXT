@@ -170,7 +170,7 @@ Bootstrap Date Range Picker
 - MIT License
 
 Chart.js
-- org.webjars:char¼±
+- org.webjars:charÂ¼Â±
 - https://mvnrepository.com/artifact/org.webjars/chartjs
 - MIT License
 
@@ -238,4 +238,5 @@ PostgreSQL JDBC Driver
 - postgresql:postgresql
 - https://jdbc.postgresql.org/about/license.html
 - BSD Zero Clause
+
 

@@ -25,7 +25,7 @@
     C:\Users\{로그인계정}\AppData\Local\Programs\vtt-metadatabrowser-2021에 설치되고 
     바탕화면에 바로가기가 생성된다. 
 
-3. 바탕화면에서 “vtt-metadatabrower-2021” 실행하여 메타데이터 브라우저에서 동영상의 메타데이터 확인 및 검증할 수 있다.
+3. 바탕화면에서 “vtt-metadatabrower-2021” 실행하여 메타데이터 브라우저에서 동영상의 메타데이터를 확인 및 검증할 수 있다.
 
 ### Project setup
 ```

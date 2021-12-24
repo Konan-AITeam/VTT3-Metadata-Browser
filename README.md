@@ -6,6 +6,7 @@
 ## vue-electron 기반 비디오 메타데이터 브라우저
 
 ### 사용 방법 
+
 1. PC에서 데이터셋을 지정된 폴더 및 위치에 놓는다.
 - 형식 
     1) 동영상 ID : {dataset_root_path}/video/2021/1/1/* , {dataset_root_path}/proxyshot/2021/1/1/*
